@@ -1,0 +1,356 @@
+TÓPICO EM DESENVOLVIMENTO!
+
+By: MrMadara
+
+# » ▬▬▬▬▬▬▬▬▬ MyCommand ▬▬▬▬▬▬▬▬▬ «
+
+
+ 
+No tutorial de hoje irei ensinar vocês a criar todos os tipos de comandos, menus, gambiaras etc... tudo dentro do nosso famoso MyCommand.
+ 
+Primeiramente vou ensinar as coisas básicas que você irão utilizar em todos os comandos.
+OBS: Estas opções não são obrigatórias nos comandos. Você pode criar os comandos sem essas opções, tudo vai depender do tipo do comando que você vai criar.
+ 
+ 
+
+permission-required: false
+
+Está opção ira definir se o player precisa ou não de permissão para poder executar o comando.
+
+ 
+
+permission-error: '&cVocê não tem permissão!'
+
+Está opção ira definir a mensagem que é enviada quando o player não tem permissão para executar o comando.
+
+ 
+
+permission-node: mycommand.cmd.<comando>
+
+Está opção serve para definir a permissão que o player ira precisar para usar o comando.
+
+ 
+
+error-message: "Comando incorreto, use /divulgar <mensagem>"
+
+Está opção ira definir qual mensagem ira aparecer quando o player não colocar todos os argumentos que o comando pede.
+
+ 
+
+success-message: "&aVocê divulgou no chat!"
+
+Está opção ira definir qual mensagem ira aparecer quando o comando for executado com sucesso.
+
+ 
+
+ require_all_arguments: true
+
+Está opção serve para definir se o player ira precisar colocar os argumentos po comando funcionar, caso ele não colocar os argumentos necessários ira aparecer a mensagem de erro "error-message"
+
+ 
+
+ register: false
+
+Está opção serve para definir se o comando sera registrado no MyCommand. Caso está opção for definida como true o comando ira aparecer no /(tab) e ele também não poderá ser usado quando o player estiver em combate.
+
+ 
+
+ delaytimer: 2
+
+Está opção serve para definir o delay usado pela variável $delay$ ou seja se você colocar $delay$/warp arena" o comando só sera executa depois de 2 segundos.
+
+ 
+
+ tab_completer:
+
+ - creative
+
+ - survival
+
+Está opção serve para auto completar um comando. Por exemplo /gamemode (tab) ira aparecer creative e survival facilitando a sua vida XD.
+ 
+
+itemcost: "COBBLESTONE:5"
+
+Está opção serve para cobrar itens para poder executar um comando. Por exemplo para executar o comando /divulgar o player ira precisar de 5 pedras no inventario.
+ 
+
+Agora que nós já aprendemos as opções dos comandos vamos fazer um comando para testar tudo isso.
+Exemplo 1:
+ 
+
+Alerta:
+  command: /Alerta
+  type: BROADCAST_TEXT
+  text:
+  - '§2[ALERTA] $multiargs'
+  error-message: "Comando incorreto, use /alerta <mensagem>"
+  success-message: "&aVocê enviou um alerta no chat!"
+  require_all_arguments: true
+  permission-required: true
+  permission-node: mycommand.cmd.Alerta
+  permission-error: "&cVocê não tem permissão para utilizar este comando."
+  register: false
+Exemplo 2:
+
+gamemode:
+  command: /gamemode
+  type: RUN_COMMAND
+  runcmd:
+  - '/gm $arg1'
+  required_args: 1
+  register: true
+  tab_completer:
+  - survival
+  - creative
+  - spectator
+  - adventure
+  error-message: '&cVocê deve usar /gamemode <modo-de-jogo>'
+  permission-error: '&cVocê não tem permissão para utilizar este comando'
+  permission-required: true
+No primeiro código nós criamos um comando básico de /alerta onde você envia um alerta no chat, e no segundo código nós encurtamos o comando /gamemode para /gm.
+ 
+ 
+Agora que vocês já sabem sobre as opções dos comandos vamos aprender sobre os tipos de comandos que podem ser criados no MyCommand. No final irei mostrar 1 exemplo de cada tipo de comando!
+
+type: TEXT
+
+Este tipo de comando mostra uma texto no chat do player quando o comando é usado.
+
+ 
+
+type: BROADCAST_TEXT
+
+Este tipo de comando mostra uma texto no chat para todos os players do servidor.
+
+ 
+
+type: RUN_COMMAND
+
+Este tipo de comando executa um skript ou uma série de comandos e códigos (é um dos tipos mais usados).
+
+ 
+
+type: RUN_COMMAND_RANDOM
+
+Este tipo de comando executa um comando aleatório dentro de uma lista de comandos. Exemplo: você tem 10 comandos e quer executar 1 aleatoriamente.
+
+ 
+
+type: RUN_CONSOLE
+
+Este tipo de comando executa um código ou um comando dentro do console. (é bem útil)
+
+ 
+
+type: ADD_PERMISSION
+
+Este tipo de comando serve para criar uma permissão ou bloquear um comando como o /plugins.
+
+ 
+
+type: RUN_AS_OPERATOR
+
+Este tipo de comando serve para executar um comando como se o player tivesse OP, ou seja ele burla a permissão do comando (não é muito confiável e é meio inútil)
+
+ 
+
+type: ICONMENU
+
+Este tipo de comando serve para criar um menu GUI em varios formatos (é o meu preferido).
+
+ 
+
+type: SCOREBOARD
+
+Este tipo de comando serve para criar uma scoreboard temporaria bem simples e com pouquíssimas variaveis.
+
+ 
+
+type: ALIAS
+
+Este tipo de comando serve para encurtar um comando ou criar um variação do comando (gamemode -> gm)
+
+ 
+
+type: CALL_URL
+
+Executa ou verifica um skript em um site ou documento php (nunca usei e também não sei como usar kkkk)
+
+ 
+
+type: TITLE
+
+Este tipo de comando envia um title na tela do player (igual TitleManager)
+
+ 
+
+type: BROADCAST_TITLE
+
+Este tipo de comando envia um title na tela de todos os players do servidor (igual TitleManager)
+
+ 
+
+type: RAW_TEXT
+
+Este tipo de comando mostra uma texto em JSON no chat do player (JSON são aqueles texto que você consegue passar o mouse em cima e clicar).
+
+ 
+
+type: BROADCAST_RAW_TEXT
+
+Este tipo de comando mostra uma texto em JSON no chat de todos os player do servidor (JSON são aqueles texto que você consegue passar o mouse em cima e clicar).
+
+ 
+type: EXP_BAR
+
+Este tipo de comando cria uma contagem regressiva na barra de XP. O seu nivel de XP vai descendo 10, 9, 8.... até 0 ai o seu xp volta ao normal.
+
+ 
+type: ACTION_BAR
+
+type: BROADCAST_ACTION_BAR
+
+Estes dois tipos de comandos enviam mensagens na action bar do player ou do servidor. Por algum motivo desconhecido eles não funcionam em servidores 1.8.
+
+ 
+type: BUNGEE_TP
+
+Este tipo de comando serve para teleportar players de 1 servidor para o outro, igual o comando /server ou /send.
+
+ 
+Agora que vocês já sabem sobre os tipos de comandos que podem ser criados pelo MyCommand vamos aprender um pouco sobre as variáveis do plugin e depois vamos ver alguns exemplos de comandos.
+ 
+$player - Retorna o nome do player.
+$getdisplayname - Retorna o nome de exibição do player.
+$uuid - Retorna a UUID do player.
+$getaddress - Retorna o IP do player.
+$health - Retorna o HP do player.
+$food - Retorna a fome do player.
+$exp - Retorna o XP do do player.
+$level - Retorna o level de XP do player.
+$getexptolevel - Retorna a quantia de XP que falta pra upar de level.
+$gamemode - Retorna o modo de jogo do player.
+$world - Retorna o nome do mundo.
+$biome - Retorna o nome do bioma.
+$locX - Retorna a coordenada X.
+$locY - Retorna a coordenada Y.
+$locZ - Retorna a coordenada Z.
+$loc_pitch - Retorna o pitch.
+$loc_yaw - Retorna o yaw.
+$loc_highestY - Retorna a coordenada Y onde esta o bloco mais alto.
+$getallowflight - Retorna TRUE e FALSE, mostra se o player esta de fly.
+$oplist - Retorna a lista de players com OP no servidor.
+$online - Retorna o número de players online no servidor.
+$ponline - Retorna a lista com o nome de todos os players online no servidor.
+$server-name - Retorna o nome do servidor (configurado no server.properties)
+$server-motd - Retorna a motd do servidor (configurada no server.properties)
+$todaydate - Retorna o dia atual.
+$wgregionname - Retorna o nome da region no worldguard.
+$primarygroup - Retorna o grupo do PEX.
+$chatprefix - Retorna o prefixo do chat.
+$chatsuffix - Retorna o suffixo do chat.
+$iteminhand - Retorna o nome do tipo do item que o player esta segurando.
+$amount_iteminhand - Retorna a quantidade do item que o player esta segurando.
+$name_iteminhand - Retorna o nome do item que o player esta segurando
+$arg1 , $arg2 , $arg3 .... $arg9 - Retorna os argumentos digitados pelo player.
+$multiargs - Retorna os varios argumentos digitados pelo player (tipo uma frase curta)
+'%Repeat%10% Oi' - Repete a mensagem X vezes.
+'%ExpBar%10%' - Cria uma contagem regressiva de 10 segundos na ExpBar.
+'$text$ Oi' - Envia um texto (isso é usado muito nos run_command)
+'$broadcasttext$ Oi' - Envia um texto broadcast (isso é usado muito nos run_command)
+$random_color - Retorna uma cor aleatória.
+$randomplayer - Retorna o nome de um player aleatório online.
+$randomnumber%100% - Retorna um numero aleatório de 0 a 100. Esse número pode ser configurado para quando você quiser, por exemplo $randomnumber%5% retorna um número aleatório de 0 a 5
+ OBS: Essas variáveis podem ser usadas em qualquer tipo de comando, seja ele texto, title, runcommand, menu_gui etc...
+ 
+Agora que vocês sabem um pouco mais sobre as variáveis do MyCommand vou ensinar um pouco sobre o Player API que é uma série de eventos que a gente pode usar nos comandos do tipo RUN_COMMAND.
+ 
+TRUE ou FALSE
+
+"%PlayerOptions%setAllowFlight: true" - Liga ou desliga o Fly do player.
+"%PlayerOptions%setBanned: true" - Bane ou desbane o player (só funciona quando ele relogar no server)
+"%PlayerOptions%setOp: false" - Tira e coloca o OP do player.
+"%PlayerOptions%setWhitelisted: false" - Tira e colocar o player da Whitelist.
+ 
+APENAS TRUE
+
+"%PlayerOptions%leaveVehicle: true" - Tira o player de dentro do veiculo.
+"%PlayerOptions%closeInventory: true" - Fecha o inventario ou o menu gui do player.
+"%PlayerOptions%clearInventory: true" - Limpa o inventario do player.
+ 
+ALTERA O NOME DO PLAYER (tipo /fake)
+
+ "%PlayerOptions%setCustomName: $arg1"
+ "%PlayerOptions%setDisplayName: $arg1"
+ "%PlayerOptions%setPlayerListName: $arg1"
+O $arg1 vai ser definido pelo player, caso você queira colocar um nome especifico é só apagar o $arg1 e colocar o nome que você quer.
+ 
+## OUTROS
+
+"%PlayerOptions%setGameMode: CREATIVE" - Altera o modo de jogo do player.
+"%PlayerOptions%teleport: nome_do_mundo:X:Y:Z" - Teleporta o player para uma coordenada do mapa.
+"%PlayerOptions%setBedSpawnLocation: nome_do_mundo:X:Y:Z" - Define o ponto de renascimento do player (spawn point)
+"%PlayerOptions%kickPlayer: Você foi kickado do servdor!" - Kicka o player do servidor (você pode alterar a mensagem)
+"%PlayerOptions%sendMessage: Ola $player" - Envia uma mensagem pro player (igual o $text$)
+"%PlayerOptions%playSound: ANVIL_BREAK:1.0:1" - Envia um som para o player. (NOME_DO_SOM:VOLUME:BYTE_DATA)
+"%PlayerOptions%playEffect: RECORD_PLAY:2260" - Executa efeito de particulas para o player (NOME_DO_EFEITO:INT_DATA)
+"%PlayerOptions%addPotionEffect: SPEED:1200:0" - Adiciona um efeito para o player (NOME_DA_POÇÃO:TEMPO_EM_TICKS:LEVEL)
+"%PlayerOptions%setFlySpeed: 5" - Define a velocidade do fly do player.
+"%PlayerOptions%setHealth: 20" - Define o HP do player.
+"%PlayerOptions%setFoodLevel: 20" - Define a fome do player.
+"%PlayerOptions%giveExp: 200" - Envia uma quantidade de XP para o player.
+"%PlayerOptions%giveExpLevels: 10" - Envia uma quantidade de Levels de XP para o player.
+"%PlayerOptions%damage: 2" - Aplica um dano no player.
+"%PlayerOptions%setFireTicks: 100" - Faz o player pegar fogo.
+OBS: 20 TICKS = 1 SEGUNDO, 200 TICKS= 10 SEGUNDOS, 1200 TICKS = 1 MINUTO, 6000 TICKS = 5 MINUTOS
+PARA ADICIONAR E SETAR ITENS PARA O PLAYER É FACIL XD
+Este é o padrão! ITEM:QUANTIDADE:DATA_TAG
+
+Exemplo:
+
+'%PlayerOptions%setItemInHand: DIAMOND_SWORD:1:0' - Seta um item na mão do player.
+'%PlayerOptions%setHelmet: DIAMOND_HELMET:1:0' - Seta um item na cabeça do player.
+'%PlayerOptions%setChestplate: DIAMOND_CHESTPLATE:1:0' - Seta um item no peitoral do player.
+'%PlayerOptions%setLeggings: DIAMOND_LEGGINGS:1:0' - Seta um item na calça do player.
+'%PlayerOptions%setBoots: DIAMOND_BOOTS:1:0' - Seta um item nas botas do player.
+'%PlayerOptions%addItem: GOLDEN_APPLE:32:1' - Seta um item no inventario.
+ 
+Caso a gente quiser colocar um nome personalizado ou colocar encantamentos devemos seguir este padrão
+'ITEM:QUANTIDADE:DATA_TAG:NOME_DO_ENCANTAMENTO;NIVEL:NOME_DO_ITEM:LORE'
+
+Exemplo:
+'%PlayerOptions%addItem: DIAMOND_SWORD:1:0:DAMAGE_ALL;5;FIRE_ASPECT;2;DURABILITY;3:&4Espada Suprema:Espada Foda'
+'%PlayerOptions%setBoots: DIAMOND_BOOTS:1:0:PROTECTION_ENVIRONMENTAL;4;DURABILITY;3:&4Bota Suprema:Lore Linha1;Lore Linha2;Lore Linha3'
+ 
+OBS: Caso a gente queira setar mais de 1 linha na lore basta colocarmos ;
+ 
+Agora quer vocês já conhecem todas a variaveis e todas as options do Player API do MyCommand vamos começar a criar comandos!
+Eu irei criar vários comandos de vários tipos para vocês entenderem bem!
+
+## Texto bem simples sem variáveis apenas texto:
+
+regras:
+  command: /regras
+  type: TEXT
+  text:
+  - '&a &l É PROIBIDO:'
+  - ''
+  - '&6* &aFazer Flood'
+  - '&6* &aFazer Spam'
+  - '&6* &aDivulgar'
+  - '&6* &aUsar Hacker'
+  permission-required: false
+  
+## Texto mais avançado com varias variáveis:
+  
+  info:
+  command: /info
+  type: TEXT
+  text:
+  - '&eOlá $player!'
+  - '&eVocê está no mundo &a$world &ee no bioma &a$biome&e.'
+  - '&eSuas coordenadas são &6X:&a $locX &6Y:&a $locY &6Z:&a $locZ'
+  - '&eVocê está com $level níveis de XP e está no gamemode $gamemode.'
+  - '&eVocê está com $health de vida e $food de fome.'
+  permission-required: false
