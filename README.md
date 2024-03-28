@@ -1,6 +1,7 @@
 MyCommand
 
-Descrição
+Descrição:
+
 MyCommand é uma coleção de comandos e funções pré-configuradas para facilitar o desenvolvimento de projetos. Este repositório contém uma variedade de scripts e utilitários prontos para uso, que visam aumentar a produtividade e simplificar tarefas comuns de programação.
 
 Como usar
