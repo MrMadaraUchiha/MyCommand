@@ -16,10 +16,10 @@ Copie os scripts ou utilitários necessários para o seu projeto.
 Integre os scripts ou utilitários em seu código conforme necessário, seguindo as instruções de uso fornecidas na documentação.
 
 Contribuição
-Contribuições são bem-vindas! Se você tem algum script ou utilitário útil que gostaria de compartilhar com a comunidade, sinta-se à vontade para enviar um pull request. Certifique-se de seguir as diretrizes de contribuição descritas no arquivo CONTRIBUTING.md.
+Contribuições são bem-vindas! Se você tem algum script ou utilitário útil que gostaria de compartilhar com a comunidade, sinta-se à vontade para enviar um pull request. Certifique-se de seguir as diretrizes de contribuição descritas no arquivo README.md.
 
 Licença
-Este projeto é licenciado sob a licença [Nome da licença]. Consulte o arquivo LICENSE.md para obter mais informações.
+Este projeto é licenciado sob a licença [MIT License]. Consulte o arquivo LICENSE.md para obter mais informações.
 
 Contato
 Se você tiver dúvidas, sugestões ou quiser relatar um problema, sinta-se à vontade para abrir uma issue neste repositório ou entre em contato via [email ou outra forma de contato].
