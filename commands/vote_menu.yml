@@ -49,7 +49,7 @@ items:
       - '&6 > Clique para receber sua recompensa!'
     click_commands:
       - '[close]'
-      - '[message] &6 ➟ &7Link de Votação: &6https://minecraft-mp.com/server/322741/vote/'
+      - '[message] &6 ➟ &7Link de Votação: &6<seu-link>'
   'vote_link_2':
     slot: 11
     material: ORANGE_DYE
@@ -64,7 +64,7 @@ items:
       - '&6 > Clique para receber sua recompensa!'
     click_commands:
       - '[close]'
-      - '[message] &6 ➟ &7Link de Votação: &6https://polymart.org/server/kingo-network.446/vote'
+      - '[message] &6 ➟ &7Link de Votação: &6<seu-link>'
   'vote_link_3':
     slot: 12
     material: ORANGE_DYE
@@ -78,7 +78,7 @@ items:
       - '&6 > Clique para receber sua recompensa!'
     click_commands: 
       - '[close]'
-      - '[message] &6 ➟ &7Link de Votação: &6https://topminecraftservers.org/vote/34584'
+      - '[message] &6 ➟ &7Link de Votação: &6<seu-link>'
     amount: 3
   'vote_link_4':
     slot: 13
@@ -93,7 +93,7 @@ items:
       - '&6 > Clique para receber sua recompensa!'
     click_commands:
       - '[close]'
-      - '[message] &6 ➟ &7Link de Votação: &6https://vote-link-4'
+      - '[message] &6 ➟ &7Link de Votação: &6<seu-link>'
     amount: 4
   'vote_link_5':
     slot: 14
@@ -108,7 +108,7 @@ items:
       - '&6 > Clique para receber sua recompensa!'
     click_commands:
       - '[close]'
-      - '[message] &6 ➟ &7Link de Votação: &6https://vote-link-5'
+      - '[message] &6 ➟ &7Link de Votação: &6<seu-link>'
     amount: 5
   'vote_link_6':
     slot: 15
@@ -123,7 +123,7 @@ items:
       - '&6 > Clique para receber sua recompensa!'
     click_commands:
       - '[close]'
-      - '[message] &6 ➟ &7Link de Votação: &6https://vote-link-6'
+      - '[message] &6 ➟ &7Link de Votação: &6<seu-link>'
     amount: 6
   'vote_link_7':
     slot: 16
@@ -138,5 +138,5 @@ items:
       - '&6 > Clique para receber sua recompensa!'
     click_commands:
       - '[close]'
-      - '[message] &6 ➟ &7Link de Votação: &6https://vote-link-7'
+      - '[message] &6 ➟ &7Link de Votação: &6<seu-link>'
     amount: 7
