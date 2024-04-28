@@ -1,0 +1,142 @@
+menu_title: '&6&l| Menu de Votos'
+register_command: true
+open_command:
+  - votar
+  - links
+open_commands:
+  - '[sound] BLOCK_BEACON_ACTIVATE'
+size: 36
+items:
+  'decorations':
+    material: GRAY_STAINED_GLASS_PANE
+    slots:
+      - 0-8
+      - 9
+      - 17-26
+    display_name: ' '
+    hide_attributes: true
+  'decorations2':
+    material: ORANGE_STAINED_GLASS_PANE
+    slots:
+      - 27
+      - 28
+      - 29-30
+      - 32-33
+      - 34
+      - 35
+    display_name: ' '
+    hide_attributes: true
+  'close':
+    slot: 31
+    material: basehead-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWE2Nzg3YmEzMjU2NGU3YzJmM2EwY2U2NDQ5OGVjYmIyM2I4OTg0NWU1YTY2YjVjZWM3NzM2ZjcyOWVkMzcifX19
+    display_name: '&6 Fechar'
+    lore:
+      - ''
+      - '&7 | Clique para fechar o Menu!'
+    click_commands:
+      - '[close]'
+  'vote_link_1':
+    slot: 10
+    material: ORANGE_DYE
+    amount: 1
+    display_name: '&6&l Votar #1'
+    lore:
+      - '&8 votar no link'
+      - ''
+      - '&6 ϟ Recompensa:'
+      - '&6 x1 &fChave de Voto'
+      - ''
+      - '&6 > Clique para receber sua recompensa!'
+    click_commands:
+      - '[close]'
+      - '[message] &6 ➟ &7Link de Votação: &6https://minecraft-mp.com/server/322741/vote/'
+  'vote_link_2':
+    slot: 11
+    material: ORANGE_DYE
+    amount: 2
+    display_name: '&6&l Votar #2'
+    lore:
+      - '&8 votar no link'
+      - ''
+      - '&6 ϟ Recompensa:'
+      - '&6 x1 &fChave de Voto'
+      - ''
+      - '&6 > Clique para receber sua recompensa!'
+    click_commands:
+      - '[close]'
+      - '[message] &6 ➟ &7Link de Votação: &6https://polymart.org/server/kingo-network.446/vote'
+  'vote_link_3':
+    slot: 12
+    material: ORANGE_DYE
+    display_name: '&6&l Votar #3'
+    lore:
+      - '&8 votar no link'
+      - ''
+      - '&6 ϟ Recompensa:'
+      - '&6 x1 &fChave de Voto'
+      - ''
+      - '&6 > Clique para receber sua recompensa!'
+    click_commands: 
+      - '[close]'
+      - '[message] &6 ➟ &7Link de Votação: &6https://topminecraftservers.org/vote/34584'
+    amount: 3
+  'vote_link_4':
+    slot: 13
+    material: ORANGE_DYE
+    display_name: '&6&l Votar #4'
+    lore:
+      - '&8 votar no link'
+      - ''
+      - '&6 ϟ Recompensa:'
+      - '&6 x1 &fChave de Voto'
+      - ''
+      - '&6 > Clique para receber sua recompensa!'
+    click_commands:
+      - '[close]'
+      - '[message] &6 ➟ &7Link de Votação: &6https://vote-link-4'
+    amount: 4
+  'vote_link_5':
+    slot: 14
+    material: ORANGE_DYE
+    display_name: '&6&l Votar #5'
+    lore:
+      - '&8 votar no link'
+      - ''
+      - '&6 ϟ Recompensa:'
+      - '&6 x1 &fChave de Voto'
+      - ''
+      - '&6 > Clique para receber sua recompensa!'
+    click_commands:
+      - '[close]'
+      - '[message] &6 ➟ &7Link de Votação: &6https://vote-link-5'
+    amount: 5
+  'vote_link_6':
+    slot: 15
+    material: ORANGE_DYE
+    display_name: '&6&l Votar #6'
+    lore:
+      - '&8 votar no link'
+      - ''
+      - '&6 ϟ Recompensa:'
+      - '&6 x1 &fChave de Voto'
+      - ''
+      - '&6 > Clique para receber sua recompensa!'
+    click_commands:
+      - '[close]'
+      - '[message] &6 ➟ &7Link de Votação: &6https://vote-link-6'
+    amount: 6
+  'vote_link_7':
+    slot: 16
+    material: ORANGE_DYE
+    display_name: '&6&l Votar #7'
+    lore:
+      - '&8 votar no link'
+      - ''
+      - '&6 ϟ Recompensa:'
+      - '&6 x1 &fChave de Voto'
+      - ''
+      - '&6 > Clique para receber sua recompensa!'
+    click_commands:
+      - '[close]'
+      - '[message] &6 ➟ &7Link de Votação: &6https://vote-link-7'
+    amount: 7
