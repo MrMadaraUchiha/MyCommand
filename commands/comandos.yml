@@ -1,0 +1,23 @@
+discord_command:
+  command: /discord
+  type: TEXT
+  text:
+  - 'Entre em nossa comunidade no Discord &ahttps://discord.gg/wJp7Zeghy9'
+  - '&7Para se conectar com nossa comunidade no Discord, clique no link acima.'
+  permission-required: false
+
+site_command:
+  command: /site
+  type: TEXT
+  text:
+  - 'Visite nosso site oficial &ahttps://kingo.network/'
+  - '&7Para visitar nosso site oficial, clique no link acima.'
+  permission-required: false
+
+loja_command:
+  command: /loja
+  type: TEXT
+  text:
+  - 'Acesse nossa loja &ahttps://loja.kingo.network/'
+  - '&7Para acessar nossa loja, clique no link acima.'
+  permission-required: false
